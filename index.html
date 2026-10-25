@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Glowdrobe: AI Stylist &amp; Wardrobe Planner for iPhone</title>
+<meta name="description" content="Snap your clothes once and let Glowdrobe's AI stylist build weather-aware outfits from your own closet. Try looks on virtually, plan your week and share fits with the community. Free on the App Store.">
+<meta name="theme-color" content="#0D0A14">
+<meta name="color-scheme" content="dark">
+<meta name="apple-itunes-app" content="app-id=6757796829">
+<link rel="canonical" href="https://glowdrobe.ai/">
+<link rel="alternate" hreflang="en" href="https://glowdrobe.ai/">
+<link rel="alternate" hreflang="tr" href="https://glowdrobe.ai/?lang=tr">
+<link rel="alternate" hreflang="x-default" href="https://glowdrobe.ai/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Glowdrobe">
+<meta property="og:url" content="https://glowdrobe.ai/">
+<meta property="og:title" content="Glowdrobe: your closet, but smarter">
+<meta property="og:description" content="AI outfits from the clothes you already own, virtual try-on, outfit planning and a style community. Free on the App Store.">
+<meta property="og:image" content="https://glowdrobe.ai/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Glowdrobe app on iPhone with the headline: Your closet, but smarter.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Glowdrobe: your closet, but smarter">
+<meta name="twitter:description" content="AI outfits from the clothes you already own, virtual try-on, outfit planning and a style community. Free on the App Store.">
+<meta name="twitter:image" content="https://glowdrobe.ai/assets/og-image.jpg">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preload" href="assets/fonts/BricolageGrotesque_800ExtraBold.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="assets/fonts/PlusJakartaSans_400Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>
+  /* pick language before first paint to avoid a flash of the wrong copy */
+  (function () {
+    var l = 'en';
+    try {
+      var q = new URLSearchParams(location.search).get('lang');
+      var s = localStorage.getItem('gd-lang');
+      if (q === 'tr' || q === 'en') l = q;
+      else if (s === 'tr' || s === 'en') l = s;
+      else if ((navigator.language || '').toLowerCase().indexOf('tr') === 0) l = 'tr';
+    } catch (e) {
+      if ((navigator.language || '').toLowerCase().indexOf('tr') === 0) l = 'tr';
+    }
+    document.documentElement.lang = l;
+    document.documentElement.className = 'js' + (l === 'tr' ? ' lang-pending' : '');
+    if (l === 'tr') setTimeout(function () { document.documentElement.classList.remove('lang-pending'); }, 1500);
+  })();
+</script>
+<script src="assets/screens/manifest.js" defer></script>
+<script src="assets/js/i18n-tr.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Glowdrobe: Wardrobe Planner",
+  "operatingSystem": "iOS",
+  "applicationCategory": "LifestyleApplication",
+  "description": "Glowdrobe turns the clothes you already own into outfits you'll love: a digital wardrobe, an AI stylist with weather-aware outfit suggestions, virtual try-on, outfit planning on a calendar and a style community.",
+  "url": "https://glowdrobe.ai/",
+  "downloadUrl": "https://apps.apple.com/app/id6757796829",
+  "installUrl": "https://apps.apple.com/app/id6757796829",
+  "image": "https://glowdrobe.ai/assets/icons/icon-512.png",
+  "inLanguage": ["en", "tr"],
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "category": "free" },
+  "author": { "@type": "Person", "name": "Barış Seçkin" }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<div class="bg" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Glowdrobe home">
+      <img src="assets/icons/icon-192.png" width="36" height="36" alt="">
+      <span>Glowdrobe</span>
+    </a>
+    <nav aria-label="Primary" class="nav-links">
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="#tour" data-i18n="nav.tour">Tour</a>
+      <a href="#premium" data-i18n="nav.premium">Premium</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.label">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+      </div>
+      <a class="btn btn-grad btn-sm" href="https://apps.apple.com/app/id6757796829" rel="noopener" data-i18n="nav.download">Download</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="chips-row" aria-label="Highlights">
+        <span class="chip chip-lime" data-i18n="hero.chip1">AI stylist</span>
+        <span class="chip chip-glass" data-i18n="hero.chip2">Virtual try-on</span>
+        <span class="chip chip-glass" data-i18n="hero.chip3">Style crew</span>
+      </p>
+      <h1 class="display" data-i18n="hero.title">Your closet, <span class="grad">but smarter.</span></h1>
+      <p class="lead" data-i18n="hero.lead">Snap your clothes once. Glowdrobe's AI stylist builds outfits from what you already own, for the weather and your plans, and lets you try looks on before you wear them.</p>
+      <div class="cta-row" id="hero-cta">
+        <a class="appstore" href="https://apps.apple.com/app/id6757796829" rel="noopener" aria-label="Download Glowdrobe on the App Store" data-i18n-attr="aria-label:badge.aria">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+          <span class="as-txt"><small data-i18n="badge.small">Download on the</small><strong data-i18n="badge.big">App Store</strong></span>
+        </a>
+        <p class="cta-note" data-i18n="hero.note">Free to download · Optional Premium<br>For iPhone</p>
+      </div>
+    </div>
+
+    <div class="hero-stage" aria-hidden="false">
+      <figure class="photo p-hero-a">
+        <picture><source srcset="assets/img/splash-2.webp" type="image/webp"><img src="assets/img/splash-2.jpg" width="746" height="1000" alt="Two friends posing in street-style outfits" data-i18n-attr="alt:alt.p2" fetchpriority="high"></picture>
+      </figure>
+      <figure class="photo p-hero-b">
+        <picture><source srcset="assets/img/splash-1.webp" type="image/webp"><img src="assets/img/splash-1.jpg" width="746" height="1000" alt="Woman in a denim jacket and bucket hat framing the camera with her hands" data-i18n-attr="alt:alt.p1"></picture>
+      </figure>
+      <div class="phone phone-hero float">
+        <div class="screen" data-ph="ai">
+          <img data-screen="ai" width="800" height="1738" alt="Glowdrobe AI stylist screen" data-i18n-attr="alt:alt.ai" fetchpriority="high">
+        </div>
+      </div>
+      <span class="sticker s-lime st-1" data-i18n="st.fast">⚡ Outfit in seconds</span>
+      <span class="sticker s-white st-2" data-i18n="st.weather">🌤 Weather-aware</span>
+      <span class="sticker s-sky st-3" data-i18n="st.tryon">🪞 See it on you</span>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>OOTD</span><span class="dot"></span><span data-i18n="tk.1">Weather-ready</span><span class="dot"></span><span data-i18n="tk.2">From your closet</span><span class="dot"></span><span data-i18n="tk.3">Capsule wardrobe</span><span class="dot"></span><span data-i18n="tk.4">Packing lists</span><span class="dot"></span><span data-i18n="tk.5">Trend radar</span><span class="dot"></span><span data-i18n="tk.6">A/B polls</span><span class="dot"></span>
+      <span>OOTD</span><span class="dot"></span><span data-i18n="tk.1">Weather-ready</span><span class="dot"></span><span data-i18n="tk.2">From your closet</span><span class="dot"></span><span data-i18n="tk.3">Capsule wardrobe</span><span class="dot"></span><span data-i18n="tk.4">Packing lists</span><span class="dot"></span><span data-i18n="tk.5">Trend radar</span><span class="dot"></span><span data-i18n="tk.6">A/B polls</span><span class="dot"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STORY TOUR (interactive demo) ============ -->
+<section class="tour section" id="tour" aria-labelledby="tour-title">
+  <div class="wrap tour-in">
+    <div class="tour-copy">
+      <div class="tour-head">
+      <span class="kicker" data-i18n="tour.kicker">Take the tour</span>
+      <h2 id="tour-title" class="h2" data-i18n="tour.title">A day with your <span class="grad">AI stylist</span></h2>
+      <p class="sub" data-i18n="tour.sub">Tap through the app like a story. Tap the sides of the phone, swipe, or use the arrow keys.</p>
+      </div>
+      <ol class="tour-steps" id="tour-steps">
+        <li><button type="button" data-step="0"><b>01</b><span><strong data-i18n="tour.s1.t">Ask anything</strong><em data-i18n="tour.s1.d">“Date night tonight, what do I wear?” Chat with Glowdrobe AI.</em></span></button></li>
+        <li><button type="button" data-step="1"><b>02</b><span><strong data-i18n="tour.s2.t">Outfit ready</strong><em data-i18n="tour.s2.d">A look built from pieces you already own, matched to the weather.</em></span></button></li>
+        <li><button type="button" data-step="2"><b>03</b><span><strong data-i18n="tour.s3.t">Try it on</strong><em data-i18n="tour.s3.d">See the outfit on your own photo before getting dressed.</em></span></button></li>
+        <li><button type="button" data-step="3"><b>04</b><span><strong data-i18n="tour.s4.t">Your closet, sorted</strong><em data-i18n="tour.s4.d">Every piece tagged by category, color, season and brand.</em></span></button></li>
+        <li><button type="button" data-step="4"><b>05</b><span><strong data-i18n="tour.s5.t">Plan the week</strong><em data-i18n="tour.s5.d">Drop looks on your calendar so mornings take seconds.</em></span></button></li>
+        <li><button type="button" data-step="5"><b>06</b><span><strong data-i18n="tour.s6.t">Post the fit</strong><em data-i18n="tour.s6.d">Share it, run an A/B poll and get the hype.</em></span></button></li>
+      </ol>
+    </div>
+
+    <div class="tour-stage">
+      <div class="story" id="story" role="region" aria-roledescription="carousel" aria-label="App tour" data-i18n-attr="aria-label:tour.aria" tabindex="0">
+        <div class="phone phone-tour">
+          <div class="screen story-screen">
+            <div class="story-bars" aria-hidden="true">
+              <span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span>
+            </div>
+            <div class="story-slide" data-ph="ai" aria-roledescription="slide"><img data-screen="ai" width="800" height="1738" alt="AI stylist chat" data-i18n-attr="alt:alt.ai" loading="lazy"></div>
+            <div class="story-slide" data-ph="outfit" aria-roledescription="slide"><img data-screen="outfit" width="800" height="1738" alt="Outfit suggestion built from your wardrobe" data-i18n-attr="alt:alt.outfit" loading="lazy"></div>
+            <div class="story-slide" data-ph="tryon" aria-roledescription="slide"><img data-screen="tryon" width="800" height="1738" alt="Virtual try-on result" data-i18n-attr="alt:alt.tryon" loading="lazy"></div>
+            <div class="story-slide" data-ph="wardrobe" aria-roledescription="slide"><img data-screen="wardrobe" width="800" height="1738" alt="Digital wardrobe grid" data-i18n-attr="alt:alt.wardrobe" loading="lazy"></div>
+            <div class="story-slide" data-ph="plan" aria-roledescription="slide"><img data-screen="plan" width="800" height="1738" alt="Outfit calendar" data-i18n-attr="alt:alt.plan" loading="lazy"></div>
+            <div class="story-slide" data-ph="community" aria-roledescription="slide"><img data-screen="community" width="800" height="1738" alt="Community feed with an A/B poll" data-i18n-attr="alt:alt.community" loading="lazy"></div>
+            <button type="button" class="tap tap-prev" aria-label="Previous screen" data-i18n-attr="aria-label:tour.prev"></button>
+            <button type="button" class="tap tap-next" aria-label="Next screen" data-i18n-attr="aria-label:tour.next"></button>
+          </div>
+        </div>
+        <span class="sticker s-lime st-tour" id="story-sticker" aria-hidden="true"></span>
+        <div class="story-ctrl">
+          <button type="button" class="round" id="story-prev" aria-label="Previous screen" data-i18n-attr="aria-label:tour.prev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="round" id="story-play" aria-label="Pause tour" data-label-pause="Pause tour" data-label-play="Play tour"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" d="M8 5v14M16 5v14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path class="i-play" d="M8 5l11 7-11 7z" fill="currentColor"/></svg></button>
+          <button type="button" class="round" id="story-next" aria-label="Next screen" data-i18n-attr="aria-label:tour.next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+        <p class="sr-only" aria-live="polite" id="story-live"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<div id="features">
+
+<section class="feature section" aria-labelledby="f-ai">
+  <div class="wrap feature-in">
+    <div class="f-copy">
+      <span class="kicker k-violet" data-i18n="f1.kicker">AI stylist</span>
+      <h2 class="h2" id="f-ai" data-i18n="f1.title">Outfit panic? <span class="grad">Solved.</span></h2>
+      <p class="sub" data-i18n="f1.sub">Chat with Glowdrobe AI for looks that match your plans, the weather and your vibe, built from the clothes you already own.</p>
+      <ul class="ticks">
+        <li data-i18n="f1.b1">Outfit suggestions from your own wardrobe</li>
+        <li data-i18n="f1.b2">Considers your local weather</li>
+        <li data-i18n="f1.b3">Packing lists for your next trip</li>
+        <li data-i18n="f1.b4">A personal trend radar for your wardrobe</li>
+        <li data-i18n="f1.b5">Color palette and style analysis</li>
+      </ul>
+    </div>
+    <div class="f-media">
+      <figure class="photo p-f1"><picture><source srcset="assets/img/splash-4.webp" type="image/webp"><img src="assets/img/splash-4.jpg" width="642" height="1000" alt="Woman in a camel coat with a coffee on a city street" data-i18n-attr="alt:alt.p4" loading="lazy"></picture></figure>
+      <div class="phone phone-f float-slow"><div class="screen" data-ph="outfit"><img data-screen="outfit" width="800" height="1738" alt="Outfit suggestion built from your wardrobe" data-i18n-attr="alt:alt.outfit" loading="lazy"></div></div>
+      <div class="bubble bubble-user" data-i18n="st.chatUser">Date night tonight, what do I wear? 😅</div>
+      <div class="bubble bubble-ai" data-i18n="st.chatAi">Black jeans + your striped tee + loafers. Effortless ✨</div>
+    </div>
+  </div>
+</section>
+
+<section class="feature section rev" aria-labelledby="f-try">
+  <div class="wrap feature-in">
+    <div class="f-copy">
+      <span class="kicker k-pink" data-i18n="f2.kicker">Virtual try-on</span>
+      <h2 class="h2" id="f-try" data-i18n="f2.title">Try it on. <span class="grad">Before you buy.</span></h2>
+      <p class="sub" data-i18n="f2.sub">Upload a photo of yourself and see any piece on you in seconds, before you get dressed or hit checkout.</p>
+      <ul class="ticks">
+        <li data-i18n="f2.b1">Preview outfits on your own photo</li>
+        <li data-i18n="f2.b2">Keep a history of your try-on results</li>
+        <li data-i18n="f2.b3">Mix pieces from your closet with new finds</li>
+      </ul>
+    </div>
+    <div class="f-media">
+      <figure class="photo p-f2"><picture><source srcset="assets/img/splash-7.webp" type="image/webp"><img src="assets/img/splash-7.jpg" width="642" height="1000" alt="Woman walking in a brown coat, striped top and navy trousers" data-i18n-attr="alt:alt.p7" loading="lazy"></picture></figure>
+      <div class="phone phone-f float-slow"><div class="screen" data-ph="tryon"><img data-screen="tryon" width="800" height="1738" alt="Virtual try-on result" data-i18n-attr="alt:alt.tryon" loading="lazy"></div></div>
+      <span class="sticker s-sky st-a" data-i18n="st.tryingOn">🪞 Trying it on you…</span>
+      <span class="sticker s-lime st-b" data-i18n="st.looksGood">Looks great on you ✨</span>
+    </div>
+  </div>
+</section>
+
+<section class="feature section" aria-labelledby="f-ward">
+  <div class="wrap feature-in">
+    <div class="f-copy">
+      <span class="kicker k-tang" data-i18n="f3.kicker">Digital wardrobe</span>
+      <h2 class="h2" id="f-ward" data-i18n="f3.title">Snap once. <span class="grad">Sorted forever.</span></h2>
+      <p class="sub" data-i18n="f3.sub">Photograph your clothes and AI auto-tags them, so your whole closet lives in your pocket.</p>
+      <ul class="ticks">
+        <li data-i18n="f3.b1">AI auto-tagging by category, color, season and brand</li>
+        <li data-i18n="f3.b2">Filter, search and build collections in seconds</li>
+        <li data-i18n="f3.b3">See what your wardrobe has, and what it's missing</li>
+      </ul>
+    </div>
+    <div class="f-media">
+      <figure class="photo p-f3"><picture><source srcset="assets/img/splash-3.webp" type="image/webp"><img src="assets/img/splash-3.jpg" width="756" height="1000" alt="Man in a green cable-knit sweater with a canvas messenger bag" data-i18n-attr="alt:alt.p3" loading="lazy"></picture></figure>
+      <div class="phone phone-f float-slow"><div class="screen" data-ph="wardrobe"><img data-screen="wardrobe" width="800" height="1738" alt="Digital wardrobe grid" data-i18n-attr="alt:alt.wardrobe" loading="lazy"></div></div>
+      <span class="sticker s-white st-a" data-i18n="st.tagged">🏷 Auto-tagged</span>
+      <span class="sticker s-sun st-b" data-i18n="st.closet">From your closet</span>
+    </div>
+  </div>
+</section>
+
+<section class="feature section rev" aria-labelledby="f-plan">
+  <div class="wrap feature-in">
+    <div class="f-copy">
+      <span class="kicker k-mint" data-i18n="f4.kicker">Plan &amp; create</span>
+      <h2 class="h2" id="f-plan" data-i18n="f4.title">Your week, <span class="grad">already dressed.</span></h2>
+      <p class="sub" data-i18n="f4.sub">Build looks on a free-form outfit board, save them, and put them on your calendar so getting ready takes seconds.</p>
+      <ul class="ticks">
+        <li data-i18n="f4.b1">Create combinations on a canvas and save them</li>
+        <li data-i18n="f4.b2">Plan what to wear on your calendar</li>
+        <li data-i18n="f4.b3">Weather-ready picks for the days ahead</li>
+      </ul>
+    </div>
+    <div class="f-media f-duo">
+      <div class="phone phone-f phone-back float-slow"><div class="screen" data-ph="outfit"><img data-screen="outfit" width="800" height="1738" alt="Outfit board" data-i18n-attr="alt:alt.board" loading="lazy"></div></div>
+      <div class="phone phone-f phone-front float"><div class="screen" data-ph="plan"><img data-screen="plan" width="800" height="1738" alt="Outfit calendar" data-i18n-attr="alt:alt.plan" loading="lazy"></div></div>
+      <span class="sticker s-lime st-a" data-i18n="st.ready">✅ Outfit ready</span>
+      <span class="sticker s-white st-b" data-i18n="st.weather">🌤 Weather-aware</span>
+    </div>
+  </div>
+</section>
+
+<section class="feature section" aria-labelledby="f-com">
+  <div class="wrap feature-in">
+    <div class="f-copy">
+      <span class="kicker k-sky" data-i18n="f5.kicker">Community</span>
+      <h2 class="h2" id="f-com" data-i18n="f5.title">Post the fit. <span class="grad">Get the hype.</span></h2>
+      <p class="sub" data-i18n="f5.sub">Share looks, run A/B polls and find people with your taste, in a community built to stay kind.</p>
+      <ul class="ticks">
+        <li data-i18n="f5.b1">Share outfits, stories and polls</li>
+        <li data-i18n="f5.b2">Follow people whose style inspires you and message them</li>
+        <li data-i18n="f5.b3">Report or block anyone, any time</li>
+      </ul>
+    </div>
+    <div class="f-media">
+      <figure class="photo p-f5"><picture><source srcset="assets/img/splash-6.webp" type="image/webp"><img src="assets/img/splash-6.jpg" width="558" height="1000" alt="Two friends in streetwear sitting on station stairs" data-i18n-attr="alt:alt.p6" loading="lazy"></picture></figure>
+      <div class="phone phone-f float-slow"><div class="screen" data-ph="community"><img data-screen="community" width="800" height="1738" alt="Community feed with an A/B poll" data-i18n-attr="alt:alt.community" loading="lazy"></div></div>
+      <div class="poll" aria-hidden="true"><b data-i18n="st.poll">Which one?</b><span class="poll-opts"><i>A</i><i>B</i></span></div>
+      <span class="sticker s-white st-b" data-i18n="st.comment">obsessed with this fit 😍</span>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how section" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="kicker" data-i18n="how.kicker">How it works</span>
+      <h2 class="h2" id="how-title" data-i18n="how.title">Three steps to <span class="grad">done.</span></h2>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="num">1</span>
+        <h3 data-i18n="how.s1.t">Snap your clothes</h3>
+        <p data-i18n="how.s1.d">Photograph your pieces once. AI tags them so your closet is searchable.</p>
+      </li>
+      <li class="step">
+        <span class="num">2</span>
+        <h3 data-i18n="how.s2.t">Ask your AI stylist</h3>
+        <p data-i18n="how.s2.d">Tell it the plan. Get outfits from your own wardrobe, ready for the weather.</p>
+      </li>
+      <li class="step">
+        <span class="num">3</span>
+        <h3 data-i18n="how.s3.t">Try it, plan it, post it</h3>
+        <p data-i18n="how.s3.d">Try the look on, drop it on your calendar and share it with the crew.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PREMIUM ============ -->
+<section class="premium section" id="premium" aria-labelledby="prem-title">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="kicker k-lime" data-i18n="prem.kicker">Free to start</span>
+      <h2 class="h2" id="prem-title" data-i18n="prem.title">Free to download. <span class="grad">Premium when you want more.</span></h2>
+      <p class="sub" data-i18n="prem.sub">AI features run on AI credits. Top up whenever you like, or go Premium for a monthly boost.</p>
+    </div>
+    <div class="plans">
+      <article class="plan">
+        <h3 data-i18n="prem.free.t">Glowdrobe</h3>
+        <p class="plan-tag" data-i18n="prem.free.tag">Free download</p>
+        <ul class="ticks">
+          <li data-i18n="prem.free.b1">Your digital wardrobe in your pocket</li>
+          <li data-i18n="prem.free.b2">Outfit board and calendar</li>
+          <li data-i18n="prem.free.b3">Community: posts, stories and polls</li>
+        </ul>
+      </article>
+      <article class="plan plan-hl">
+        <span class="sticker s-lime plan-st" data-i18n="prem.pro.st">✨ Premium</span>
+        <h3 data-i18n="prem.pro.t">Glowdrobe Premium</h3>
+        <p class="plan-tag" data-i18n="prem.pro.tag">Auto-renewing subscription</p>
+        <ul class="ticks">
+          <li data-i18n="prem.pro.b1"><strong>20 AI credits</strong> added every month</li>
+          <li data-i18n="prem.pro.b2"><strong>100 extra wardrobe uploads</strong> every month</li>
+          <li data-i18n="prem.pro.b3">Cancel any time in your App Store settings</li>
+        </ul>
+      </article>
+      <article class="plan">
+        <h3 data-i18n="prem.pack.t">AI credit pack</h3>
+        <p class="plan-tag" data-i18n="prem.pack.tag">One-time purchase</p>
+        <ul class="ticks">
+          <li data-i18n="prem.pack.b1"><strong>10 AI credits</strong>, no subscription</li>
+          <li data-i18n="prem.pack.b2">Buy again whenever you need more</li>
+        </ul>
+      </article>
+    </div>
+    <p class="fine" data-i18n="prem.fine">Prices are shown in your local currency in the App Store before you buy. Subscriptions are charged to your Apple ID and renew automatically unless cancelled at least 24 hours before the end of the current period.</p>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ============ -->
+<section class="privacy section" aria-labelledby="priv-title">
+  <div class="wrap">
+    <div class="priv-card">
+      <h2 class="h3" id="priv-title" data-i18n="priv.title">Your style, your data.</h2>
+      <ul class="priv-grid">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+          <span data-i18n="priv.b1">Your photos are processed only to generate your result.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>
+          <span data-i18n="priv.b2">No ad tracking across other apps and websites.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+          <span data-i18n="priv.b3">Report or block anyone, any time.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>
+          <span data-i18n="priv.b4">Delete your account right inside the app.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq section" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-in">
+    <div class="center-head">
+      <span class="kicker" data-i18n="faq.kicker">FAQ</span>
+      <h2 class="h2" id="faq-title" data-i18n="faq.title">Good <span class="grad">questions.</span></h2>
+    </div>
+    <div class="qa">
+      <details>
+        <summary data-i18n="faq.q1">Is Glowdrobe free?</summary>
+        <p data-i18n="faq.a1">Yes. Glowdrobe is free to download. AI features such as outfit suggestions and virtual try-on use AI credits. You can buy a one-time pack of 10 AI credits or subscribe to Premium, which adds AI credits and extra wardrobe uploads every month. Prices are shown in the App Store.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q2">Do I need to buy new clothes?</summary>
+        <p data-i18n="faq.a2">No. The whole point is to get more out of what you already own. The AI stylist builds outfits from the pieces in your digital wardrobe.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q3">How does virtual try-on work?</summary>
+        <p data-i18n="faq.a3">Upload a photo of yourself, pick an outfit, and Glowdrobe generates a preview of the look on you. Your results are saved in your try-on history.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q4">What happens to my photos?</summary>
+        <p data-i18n="faq.a4">Photos you upload are processed only to deliver the feature you asked for, like tagging an item or generating a try-on. Read the full details in our <a href="https://legal.glowdrobe.ai/privacy-policy" rel="noopener">Privacy Policy</a>.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q5">How do I cancel Premium?</summary>
+        <p data-i18n="faq.a5">Premium is managed by Apple. Open your App Store account settings, go to Subscriptions and cancel at least 24 hours before the end of the current period.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q6">Can I delete my account?</summary>
+        <p data-i18n="faq.a6">Yes, any time, right inside the app from your settings.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q7">Which devices and languages are supported?</summary>
+        <p data-i18n="faq.a7">Glowdrobe is available for iPhone on the App Store, in English and Turkish.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final section" id="download" aria-labelledby="final-title">
+  <div class="wrap">
+    <div class="final-card">
+      <div class="final-copy">
+        <img class="final-icon" src="assets/icons/icon-192.png" width="88" height="88" alt="Glowdrobe app icon" data-i18n-attr="alt:alt.icon" loading="lazy">
+        <h2 class="display-2" id="final-title" data-i18n="final.title">Rule your style.</h2>
+        <p class="lead" data-i18n="final.sub">Your AI stylist is ready when you are. Takes 30 seconds to get started.</p>
+        <a class="appstore appstore-lg" href="https://apps.apple.com/app/id6757796829" rel="noopener" aria-label="Download Glowdrobe on the App Store" data-i18n-attr="aria-label:badge.aria">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+          <span class="as-txt"><small data-i18n="badge.small">Download on the</small><strong data-i18n="badge.big">App Store</strong></span>
+        </a>
+      </div>
+      <div class="qr-card">
+        <img src="assets/qr-appstore.svg" width="180" height="180" alt="QR code linking to Glowdrobe on the App Store" data-i18n-attr="alt:alt.qr" loading="lazy">
+        <p data-i18n="final.qr">Scan with your iPhone camera</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="brand" href="#top"><img src="assets/icons/icon-192.png" width="32" height="32" alt="" loading="lazy"><span>Glowdrobe</span></a>
+    <nav aria-label="Legal" data-i18n-attr="aria-label:foot.aria">
+      <a href="https://legal.glowdrobe.ai/privacy-policy" rel="noopener" data-i18n="foot.privacy">Privacy Policy</a>
+      <a href="https://legal.glowdrobe.ai/terms-of-use" rel="noopener" data-i18n="foot.terms">Terms of Use</a>
+      <a href="https://legal.glowdrobe.ai/support" rel="noopener" data-i18n="foot.support">Support</a>
+    </nav>
+    <p class="copy">© 2026 Barış Seçkin. <span data-i18n="foot.apple">Apple, the Apple logo, iPhone and App Store are trademarks of Apple Inc.</span></p>
+  </div>
+</footer>
+
+<div class="dock" id="dock" aria-hidden="true">
+  <img src="assets/icons/icon-192.png" width="40" height="40" alt="" loading="lazy">
+  <span class="dock-txt"><strong>Glowdrobe</strong><small data-i18n="dock.sub">Free on the App Store</small></span>
+  <a class="btn btn-grad btn-sm" href="https://apps.apple.com/app/id6757796829" rel="noopener" tabindex="-1" data-i18n="dock.get">Get the app</a>
+</div>
+
+<noscript><style>.js .reveal{opacity:1;transform:none}</style></noscript>
+</body>
+</html>
