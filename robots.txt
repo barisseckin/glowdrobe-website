@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /.preview/
-Disallow: /scripts/
 
 Sitemap: https://glowdrobe.ai/sitemap.xml
