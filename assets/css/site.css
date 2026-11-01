@@ -98,7 +98,7 @@ html[data-launch="live"] [data-when="prelaunch"] { display: none !important; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
 
-body { background: var(--tangerine); --focus-ring: rgba(20, 16, 31, .28); }
+body { background: var(--violet); color: #fff; --focus-ring: rgba(255, 255, 255, .85); }
 .split { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); gap: clamp(20px, 4vw, 72px); padding-inline-end: clamp(20px, 5vw, 88px); }
 .side { position: sticky; top: 0; height: 100svh; min-height: 620px; display: flex; flex-direction: column; justify-content: space-between; padding-block: 22px; padding-inline-start: var(--gutter); }
 .side-mid { display: grid; gap: 20px; }
@@ -118,7 +118,7 @@ body { background: var(--tangerine); --focus-ring: rgba(20, 16, 31, .28); }
 .scan h2 { font-size: 30px; margin-bottom: 12px; }
 .tabs { display: flex; flex-wrap: wrap; gap: 6px; }
 .tabs button { min-height: 44px; padding: 0 14px; border: 2px solid var(--ink); border-radius: 8px; background: #fff; font-weight: 700; font-size: 15px; transition: background .2s, color .2s; }
-.tabs button:hover { background: #FFE7D6; }
+.tabs button:hover { background: var(--lilac-2); }
 .tabs button[aria-selected="true"] { background: var(--ink); color: #fff; }
 .scan-item { position: relative; display: grid; place-items: center; height: clamp(170px, 23vh, 240px); margin-top: 14px; overflow: hidden; background: #FFF1E6; border-radius: 10px; }
 .scan-item img { position: absolute; inset: 6%; width: 88%; height: 88%; object-fit: contain; }
@@ -186,7 +186,7 @@ body { background: var(--tangerine); --focus-ring: rgba(20, 16, 31, .28); }
 .langs summary svg { width: 20px; height: 20px; }
 .langs ul { position: absolute; z-index: 20; top: 100%; inset-inline-end: 0; width: max-content; max-height: 70vh; overflow-y: auto; padding: 8px; background: #fff; color: var(--ink); border: 2px solid var(--ink); border-radius: 12px; columns: 2; column-gap: 8px; }
 .langs a { display: block; padding: 8px 10px; border-radius: 8px; text-decoration: none; break-inside: avoid; }
-.langs a:hover { background: #FFE7D6; }
+.langs a:hover { background: var(--lilac-2); }
 .langs a[aria-current] { font-weight: 700; background: var(--ink); color: #fff; }
 
 /* Scripts the brand faces don't cover use the platform's own type, untracked. */
@@ -321,3 +321,35 @@ html:lang(ja) .cta-note { word-break: keep-all; }
 /* The pill is the field: its ring shows focus, so the input inside draws none of its own. */
 .notify input:focus, .notify input:focus-visible { outline: 0; box-shadow: none; }
 .notify-row:focus-within { box-shadow: 0 0 0 3px var(--ink); }
+
+/* App identity: violet ground and actions, lime for the one accent, lilac surfaces. */
+:focus-visible { outline-color: #fff; box-shadow: 0 0 0 3px var(--ink); }
+.paper :focus-visible { outline-color: var(--violet); box-shadow: 0 0 0 3px var(--lilac-2); }
+.paper { color: var(--ink); background: var(--lilac); }
+.paper::before { background: linear-gradient(135deg, transparent 50%, var(--lilac) 50%) 0 0 / 18px 18px repeat-x, linear-gradient(225deg, transparent 50%, var(--lilac) 50%) 0 0 / 18px 18px repeat-x; }
+.paper::after { background: linear-gradient(45deg, transparent 50%, var(--lilac) 50%) 0 100% / 18px 18px repeat-x, linear-gradient(315deg, transparent 50%, var(--lilac) 50%) 0 100% / 18px 18px repeat-x; }
+.langs ul { color: var(--ink); }
+.langs a[aria-current] { background: var(--violet); }
+.side .notify-row { border-color: #fff; }
+.side .notify-row:focus-within { box-shadow: 0 0 0 3px var(--lime); }
+.side .notify input, .paper .notify input { color: var(--ink); }
+.side .notify button { background: var(--lime); color: var(--ink); }
+.side .notify button:hover { background: #D4FF4F; }
+.side .notify-msg[data-state="error"] { background: var(--ink); }
+.paper .notify-row { border-color: var(--violet); }
+.paper .notify-row:focus-within { box-shadow: 0 0 0 3px var(--lilac-2); }
+.paper .notify button { background: var(--violet); }
+.paper .notify button:hover { background: var(--violet-deep); }
+.tabs button { border-color: var(--violet); color: var(--violet-deep); }
+.tabs button[aria-selected="true"] { background: var(--violet); border-color: var(--violet); color: #fff; }
+.line-check { background: var(--violet); }
+.head, .scan, .li { border-bottom-color: var(--violet-bright); }
+.print i, .extras i { border-bottom-color: var(--violet-bright); }
+.barcode { color: var(--violet-deep); }
+.prices th, .prices td, .paper .faq details { border-bottom-color: var(--lilac-2); }
+.paper a { color: var(--violet-deep); }
+.foot, .paper + .foot { color: #fff; }
+.dock a { background: var(--violet); }
+.store { background: var(--ink); color: #fff; }
+.paper .store { color: #fff; }
+::selection { background: var(--lime); color: var(--ink); }
