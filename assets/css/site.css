@@ -353,3 +353,11 @@ html:lang(ja) .cta-note { word-break: keep-all; }
 .store { background: var(--ink); color: #fff; }
 .paper .store { color: #fff; }
 ::selection { background: var(--lime); color: var(--ink); }
+
+/* Ad cookie choice. Only shown when a pixel id is set in _src/site.json. Sits above the phone dock. */
+.consent { position: fixed; z-index: 60; inset-inline: 12px; bottom: max(12px, env(safe-area-inset-bottom)); max-width: 460px; margin-inline-start: auto; padding: 14px 16px; background: #fff; color: var(--ink); border: 2px solid var(--ink); border-radius: 12px; font-size: 14.5px; line-height: 1.4; }
+.consent p { margin: 0 0 10px; }
+.consent a { color: var(--violet-deep); text-decoration: underline; }
+.consent div { display: flex; gap: 8px; }
+.consent button { flex: 1; min-height: 44px; padding: 0 12px; border: 2px solid var(--ink); border-radius: 999px; background: #fff; color: var(--ink); font: inherit; font-weight: 700; cursor: pointer; }
+.consent button[data-c="yes"] { background: var(--ink); color: #fff; }

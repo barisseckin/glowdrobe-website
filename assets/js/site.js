@@ -11,6 +11,12 @@
     msg.textContent = text;
     msg.dataset.state = state;
   }
+  /* utm_source travels with the signup, so the admin list shows which ad brought it. */
+  var utm = (new URLSearchParams(location.search).get('utm_source') || '').replace(/[^\w-]/g, '').slice(0, 20);
+  function leadSource(form) {
+    var place = form.dataset.source || 'site';
+    return utm ? utm + ':' + place : place;
+  }
   document.querySelectorAll('form.notify').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -33,11 +39,12 @@
       fetch(cfg.waitlistEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email, source: form.dataset.source || 'site', lang: document.documentElement.lang, website: form.querySelector('.hp').value })
+        body: JSON.stringify({ email: email, source: leadSource(form), lang: document.documentElement.lang, website: form.querySelector('.hp').value })
       }).then(function (r) {
         if (!r.ok) throw new Error(r.status);
         form.classList.add('is-done');
         say(form, T.added, 'ok');
+        document.dispatchEvent(new CustomEvent('gd:lead'));
       }).catch(function () {
         say(form, T.err_send, 'error');
       }).finally(function () { button.disabled = false; });

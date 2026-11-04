@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /.preview/
+Disallow: /scripts/
+Disallow: /concepts/
+Disallow: /_src/
+Disallow: /.impeccable/
 
 Sitemap: https://glowdrobe.ai/sitemap.xml
